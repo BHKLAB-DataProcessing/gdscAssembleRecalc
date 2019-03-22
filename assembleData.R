@@ -14,4 +14,4 @@ for(fn in myfn){
 
 res <- do.call(rbind, slices)
 
-save(res, file="/pfs/out/gdscProfile.rds")
+save(res, file="/pfs/out/gdscProfile.RData")
