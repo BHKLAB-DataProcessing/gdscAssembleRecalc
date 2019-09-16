@@ -8,7 +8,7 @@ slices <- list()
 for(fn in myfn){
 	temp <- readRDS(fn)
 	parTable <- do.call(rbind,temp[[3]])
-	n <- cbind("AAC" = temp[[1]], "IC50" = temp[[2]], parTable) 
+	n <- cbind("AAC" = as.numeric(unlist(temp[[1]]))/100, "IC50" = as.numeric(unlist(temp[[2]])), parTable) 
 	slices[[fn]] <- n
 }
 
