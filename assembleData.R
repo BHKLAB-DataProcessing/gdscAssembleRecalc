@@ -16,6 +16,7 @@ for(fn in myfn){
 					"E_inf" = as.numeric(unlist(parTable[,2])),
 					"EC50" = as.numeric(unlist(parTable[,3]))) 
 	print(head(rownames(n)))
+	rownames(n) <- names(temp[[3]])
 	slices[[fn]] <- n
 }
 
