@@ -15,6 +15,7 @@ for(fn in myfn){
 					"HS" = as.numeric(unlist(temp[[3]]$HS)),
 					"E_inf" = as.numeric(unlist(temp[[3]]$E_inf)),
 					"EC50" = as.numeric(unlist(temp[[3]]$EC50))) 
+	print(head(rownames(n)))
 	slices[[fn]] <- n
 }
 
