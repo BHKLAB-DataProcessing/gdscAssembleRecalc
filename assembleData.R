@@ -9,7 +9,7 @@ for(fn in myfn){
 	temp <- readRDS(fn)
 	parTable <- do.call(rbind,temp[[3]])
 	# print(head(rownames(parTable)))
-	print(str(parTable))
+	print(str(temp[[3]]))
 	n <- data.frame("AAC" = as.numeric(unlist(temp[[1]]))/100, 
 					"IC50" = as.numeric(unlist(temp[[2]])), 
 					"HS" = as.numeric(unlist(temp[[3]]$HS)),
