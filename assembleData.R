@@ -12,9 +12,9 @@ for(fn in myfn){
 	print(str(temp[[3]]))
 	n <- data.frame("AAC" = as.numeric(unlist(temp[[1]]))/100, 
 					"IC50" = as.numeric(unlist(temp[[2]])), 
-					"HS" = as.numeric(unlist(temp[[3]]$HS)),
-					"E_inf" = as.numeric(unlist(temp[[3]]$E_inf)),
-					"EC50" = as.numeric(unlist(temp[[3]]$EC50))) 
+					"HS" = as.numeric(unlist(parTable$HS)),
+					"E_inf" = as.numeric(unlist(parTable$E_inf)),
+					"EC50" = as.numeric(unlist(parTable$EC50))) 
 	print(head(rownames(n)))
 	slices[[fn]] <- n
 }
