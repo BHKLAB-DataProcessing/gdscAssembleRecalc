@@ -9,12 +9,12 @@ for(fn in myfn){
 	temp <- readRDS(fn)
 	parTable <- do.call(rbind,temp[[3]])
 	# print(head(rownames(parTable)))
-	print(str(temp[[3]]))
+	# print(str(temp[[3]]))
 	n <- data.frame("AAC" = as.numeric(unlist(temp[[1]]))/100, 
 					"IC50" = as.numeric(unlist(temp[[2]])), 
-					"HS" = as.numeric(unlist(parTable$HS)),
-					"E_inf" = as.numeric(unlist(parTable$E_inf)),
-					"EC50" = as.numeric(unlist(parTable$EC50))) 
+					"HS" = as.numeric(unlist(parTable[,1])),
+					"E_inf" = as.numeric(unlist(parTable[,2])),
+					"EC50" = as.numeric(unlist(parTable[,3]))) 
 	print(head(rownames(n)))
 	slices[[fn]] <- n
 }
