@@ -10,8 +10,8 @@ for(fn in myfn){
 	parTable <- do.call(rbind,temp[[3]])
 	# print(head(rownames(parTable)))
 	# print(str(temp[[3]]))
-	n <- cbind("AAC" = as.numeric(unlist(temp[[1]]))/100, 
-					"IC50" = as.numeric(unlist(temp[[2]])), 
+	n <- cbind("aac_recomputed" = as.numeric(unlist(temp[[1]]))/100, 
+					"ic50_recomputed" = as.numeric(unlist(temp[[2]])), 
 					"HS" = as.numeric(unlist(parTable[,1])),
 					"E_inf" = as.numeric(unlist(parTable[,2])),
 					"EC50" = as.numeric(unlist(parTable[,3]))) 
